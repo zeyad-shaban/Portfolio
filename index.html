@@ -63,7 +63,7 @@
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Zeyad Shaban</div>
                 <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="#">Hire me</a>
+                <a href="mailto:zeyadshapan2004@gmail.com">Hire me</a>
             </div>
         </div>
     </section>
@@ -78,9 +78,12 @@
                 </div>
                 <div class="column right">
                     <div class="text">I'm Egyption and I'm a <span class="typing-2"></span></div>
-                    <p>Hi, I'm a Web and mobile developer. Happy to be working with you 😃.</p>
-                    <p>My favourite technologies are JavaScript and Python, both are very great. I use Django to finish
-                        projects <b>very</b> fast, while Node.js for long term projects </p>
+                    <p>Hi, I'm a Full stack Web and cross platform mobile developer. Happy to be working with you 😃.
+                    </p>
+                    <p>My favourite technologies are JavaScript and Python, both are very great. I use Django framework
+                        to build web applications very fast, while Node.js for long term projects. </p>
+                    <p>For mobile developemnt I use React Native so I can make sure that the app is supported on both
+                        Android and IOS</p>
                 </div>
             </div>
         </div>
@@ -187,11 +190,9 @@
                 <div class="card" onclick="document.querySelector('#link-dfreemedia').click()">
                     <a href="https://dfreemedia.pythonanywhere.com" target="_blank" id="link-dfreemedia"></a>
                     <div class="box">
-                        <img src="./img/dfreemedia.png" alt="Dfreemedia">
+                        <img src="./img/dfreemedia.png" alt="Dfreemedia" width="140">
                         <div class="text">Dfreemedia</div>
-                        <p>My first ever startup. A social media website with some cool functionalities and algorithms
-                            to give user more control. Please note that I didn't spend much time to optimize its speed
-                        </p>
+                        <p>A social media website with some cool functionalities and algorithms.</p>
                         <br>
                         <p>Python/Django</p>
                     </div>
@@ -199,9 +200,10 @@
                 <div class="card" onclick="document.querySelector('#link-orgachat').click()">
                     <a href="https://www.orgachat.com" target="_blank" id="link-orgachat"></a>
                     <div class="box">
-                        <img src="./img/orgachat.png" alt="Orgachat">
+                        <img src="./img/orgachat.png" alt="Orgachat" width="140">
                         <div class="text">Orgachat</div>
-                        <p>A chat app and my current startup</p>
+                        <p>A simple chat app and my current startup. Contains some ordering functionalities</p>
+                        <p>State: actively developing</p>
                         <br>
                         <p>Python/Django</p>
                     </div>
@@ -210,7 +212,7 @@
                 <div class="card" onclick="document.querySelector('#link-prodbox').click()">
                     <a href="https://prodbox.pythonanywhere.com" target="_blank" id="link-prodbox"></a>
                     <div class="box">
-                        <img src="./img/prodbox.png" alt="Prodbox">
+                        <img src="./img/prodbox.png" alt="Prodbox" width="160">
                         <div class="text">Prodbox</div>
                         <p>An online store for people to sell their virtual products, integrated with Paypal
                         </p>
@@ -228,8 +230,7 @@
             <div class="contact-content">
                 <div class="column left">
                     <div class="text">Get in Touch</div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum corporis fuga
-                        corrupti. Doloribus quis soluta nesciunt veritatis vitae nobis?</p>
+                    <p>Send me a message through email, I'm very excited to be working with you 😄</p>
                     <div class="icons">
                         <div class="row">
                             <i class="fas fa-user"></i>
@@ -256,21 +257,21 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="#">
+                    <form action="mailto:zeyadshapan2004@gmail.com">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" placeholder="Name" name="name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" placeholder="Email" name="mail" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" placeholder="Subject" name="subject" required>
                         </div>
-                        <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
-                        </div>
+                        <!-- <div class="field textarea">
+                            <textarea cols="30" rows="10" placeholder="Message.." name="comment" required></textarea>
+                        </div> -->
                         <div class="button">
                             <button type="submit">Send message</button>
                         </div>
