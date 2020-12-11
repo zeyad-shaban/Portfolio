@@ -340,10 +340,13 @@ section .title::after {
     background: #fff;
 }
 
-.services .title::after,
 .teams .title::after {
     background: #111;
     content: "what i provide";
+}
+.services .title::after{
+    background: #111;
+    content: "what i built";
 }
 
 .services .serv-content .card {
@@ -428,20 +431,21 @@ section .title::after {
     background: crimson
 }
 
-.skills-rate .django::before {
-    width: 90%
-}
 
 .skills-rate .js::before {
     width: 95%
 }
 
-.skills-rate .react-native::before {
-    width: 75%
+.skills-rate .react::before {
+    width: 90%
 }
 
-.skills-rate .react::before {
-    width: 80%
+.skills-rate .django::before {
+    width: 90%
+}
+
+.skills-rate .react-native::before {
+    width: 75%
 }
 
 .skills-rate .html::before {
@@ -453,8 +457,8 @@ section .title::after {
 }
 
 
-.skills-rate .sql::before {
-    width: 50%
+.skills-rate .nosql::before {
+    width: 60%
 }
 
 
