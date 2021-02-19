@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
+<!-- Created By CodingNepal, Refactored by Code With Zeyad -->
 <html lang="en">
 
 <head>
@@ -8,23 +8,12 @@
     <title>Zeyad Shaban Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <!-- FAvicons -->
-    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/favicons/site.webmanifest">
-    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <!-- FAvicons End -->
+    <script async src="https://kit.fontawesome.com/78f2495e06.js" crossorigin="anonymous"></script>
+
+    <!-- Favicons (you can use favicon-generator but I will keep it very simple) -->
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+    <!-- Favicons End -->
     <style>
         .home {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./img/banner.jpg") no-repeat center;
@@ -74,11 +63,12 @@
             <h2 class="title">About me</h2>
             <div class="about-content">
                 <div class="column left">
-                    <img src="./img/personal.jpeg" alt="">
+                    <img src="./img/personal.png" alt="">
                 </div>
                 <div class="column right">
                     <div class="text">I'm Egyption and I'm a <span class="typing-2"></span></div>
-                    <p>Hi, I'm a MERN Stack and Django Web developer, and a React Native mobile developer. Happy to be working with you 😃.
+                    <p>Hi, I'm a MERN Stack and Django Web developer, and a React Native mobile developer. Happy to be
+                        working with you 😃.
                     </p>
                     <p>
 
@@ -97,7 +87,7 @@
                     <div class="box">
                         <i class="fas fa-code"></i>
                         <div class="text">Web Full-stack Development</div>
-                        <p>I will develop both the UI frontend and server backend for your great idea 
+                        <p>I will develop both the UI frontend and server backend for your great idea
                             💡
                         </p>
                     </div>
@@ -198,6 +188,15 @@
                         </p>
                         <br>
                         <p><b><em>MERN STACK & REDUX</em></b></p>
+                    </div>
+                </div>
+                <div class="card" onclick="document.querySelector('#youtube').click()">
+                    <a href="https://www.youtube.com/channel/UCFjcc0rq2guK6kJ4va49zgA" target="_blank" id="youtube"></a>
+                    <div class="box">
+                        <img src="./img/personal.png" alt="Code With Zeyad" width="250" height="250"
+                            style="border-radius: 50%;">
+                        <div class="text">Code With Zeyad</div>
+                        <p>My youtube channel where I upload arabic tutorials on how to code.</p>
                     </div>
                 </div>
                 <div class="card" onclick="document.querySelector('#link-dfreemedia').click()">

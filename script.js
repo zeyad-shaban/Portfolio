@@ -1,72 +1,56 @@
-$(document).ready(function () {
-    $(window).scroll(function () {
-        // sticky navbar on scroll script
-        if (this.scrollY > 20) {
-            $('.navbar').addClass("sticky");
-        } else {
-            $('.navbar').removeClass("sticky");
+const scrollToTop = (duration = 400) => {
+    // cancel if already on top
+    if (document.scrollingElement.scrollTop === 0) return;
+
+    const totalScrollDistance = document.scrollingElement.scrollTop;
+    let scrollY = totalScrollDistance, oldTimestamp = null;
+
+    function step(newTimestamp) {
+        if (oldTimestamp !== null) {
+            // if duration is 0 scrollY will be -Infinity
+            scrollY -= totalScrollDistance * (newTimestamp - oldTimestamp) / duration;
+            if (scrollY <= 0) return document.scrollingElement.scrollTop = 0;
+            document.scrollingElement.scrollTop = scrollY;
         }
+        oldTimestamp = newTimestamp;
+        window.requestAnimationFrame(step);
+    }
+    window.requestAnimationFrame(step);
+};
 
-        // scroll-up button show/hide script
-        if (this.scrollY > 500) {
-            $('.scroll-up-btn').addClass("show");
-        } else {
-            $('.scroll-up-btn').removeClass("show");
-        }
-    });
+document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.querySelector('.navbar');
+    const scrollBtn = document.querySelector('.scroll-up-btn');
+    const html = document.querySelector('html');
+    const navLinks = document.querySelectorAll('.navbar .menu li');
+    const menuBtns = document.querySelectorAll('.menu-btn');
 
-    // slide-up script
-    $('.scroll-up-btn').click(function () {
-        $('html').animate({ scrollTop: 0 });
-        // removing smooth scroll on slide-up button click
-        $('html').css("scrollBehavior", "auto");
-    });
-
-    $('.navbar .menu li a').click(function () {
-        // applying again smooth scroll on menu items click
-        $('html').css("scrollBehavior", "smooth");
-    });
-
-    // toggle menu/navbar script
-    $('.menu-btn').click(function () {
-        $('.navbar .menu').toggleClass("active");
-        $('.menu-btn i').toggleClass("active");
-    });
-
-    // typing text animation script
-    var typed = new Typed(".typing", {
-        strings: ["MERN full stack developer", "Mobile developer", "Founder & CEO"],
+    const typingText = {
+        strings: ["Youtuber", "MERN stack developer", "Mobile developer", "2D Unity developer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
-    });
+    };
 
-    var typed = new Typed(".typing-2", {
-        strings: ["MERN full stack developer", "Mobile developer", "Founder & CEO"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
+    window.onscroll = () => {
+        this.scrollY > 20 ? navbar.classList.add('sticky') : navbar.classList.remove('sticky');
+        this.scrollY > 500 ? scrollBtn.classList.add('show') : scrollBtn.classList.remove('show');
+    };
 
-    // owl carousel script
-    $('.carousel').owlCarousel({
-        margin: 20,
-        loop: true,
-        autoplayTimeOut: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: false
-            },
-            600: {
-                items: 2,
-                nav: false
-            },
-            1000: {
-                items: 3,
-                nav: false
-            }
-        }
-    });
+    scrollBtn.onclick = () => {
+        scrollToTop();
+        html.style.scrollBehavior = 'auto';
+    };
+
+    for (link of navLinks)
+        link.onclick = () => html.style.scrollBehavior = "smooth";
+
+    for (btn of menuBtns)
+        btn.onclick = () => {
+            document.querySelector('.navbar .menu').classList.toggle("active");
+            document.querySelector('.menu-btn i').classList.toggle("active");
+        };
+
+    new Typed(".typing", typingText);
+    new Typed(".typing-2", typingText);
 });

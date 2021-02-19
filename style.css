@@ -344,7 +344,8 @@ section .title::after {
     background: #333;
     content: "what i provide";
 }
-.services .title::after{
+
+.services .title::after {
     background: #333;
     content: "what i built";
 }
@@ -450,6 +451,7 @@ section .title::after {
 .skills-rate .mongodb::before {
     width: 75%
 }
+
 .skills-rate .redux::before {
     width: 80%
 }
@@ -457,6 +459,7 @@ section .title::after {
 .skills-rate .javascript::before {
     width: 97%
 }
+
 .skills-rate .django::before {
     width: 90%
 }
