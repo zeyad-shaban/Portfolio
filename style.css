@@ -8,6 +8,18 @@
     text-decoration: none
 }
 
+
+ul.checks{
+    text-align: left;
+    list-style: none;
+}
+ul.checks li:before{
+    content: '✓';
+    color: rgb(8, 240, 8);
+    margin-right: 10px;
+}
+
+
 html {
     scroll-behavior: smooth
 }
