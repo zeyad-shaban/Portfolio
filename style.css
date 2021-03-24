@@ -9,11 +9,12 @@
 }
 
 
-ul.checks{
+ul.checks {
     text-align: left;
     list-style: none;
 }
-ul.checks li:before{
+
+ul.checks li:before {
     content: '✓';
     color: rgb(8, 240, 8);
     margin-right: 10px;
@@ -451,29 +452,25 @@ section .title::after {
 }
 
 .skills-rate .react::before {
-    width: 90%
+    width: 85%
 }
 
 
 .skills-rate .react-native::before {
-    width: 75%
+    width: 60%
 }
 
-
-.skills-rate .mongodb::before {
-    width: 75%
-}
 
 .skills-rate .redux::before {
     width: 80%
 }
 
 .skills-rate .javascript::before {
-    width: 97%
+    width: 99%
 }
 
 .skills-rate .django::before {
-    width: 90%
+    width: 70%
 }
 
 

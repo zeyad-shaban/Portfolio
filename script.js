@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuBtns = document.querySelectorAll('.menu-btn');
 
     const typingText = {
-        strings: ["Youtuber", "MERN stack developer", "Mobile developer", "2D Unity developer"],
+        strings: ["Youtuber", "Node Backend developer", "MERN Stack developer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
